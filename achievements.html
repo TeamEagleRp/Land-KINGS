@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>إنجازات الملوك — Land Kings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark"><img src="1.jpg" alt="Land Kings Logo"></div>
+        <div class="brand-text">Land Kings</div>
+      </div>
+      <button id="hamburgerBtn" class="hamburger" aria-label="قائمة">&#9776;</button>
+      <div class="sidebar" id="sidebar">
+        <button id="closeSidebar" class="close-sidebar" aria-label="إغلاق">×</button>
+        <nav class="sidebar-nav" aria-label="القائمة الجانبية">
+          <a href="index.html">الرئيسية</a>
+          <a href="founders.html">مؤسسي الملوك</a>
+          <a href="achievements.html">إنجازات الملوك</a>
+          <a href="accounts.html">الحسابات</a>
+          <a href="website.html">واجهة الموقع</a>
+          <a href="designer.html">مصمم التطبيق</a>
+        </nav>
+      </div>
+      <button id="discordLoginBtn" class="discord-button" type="button">تسجيل دخول عبر ديسكورد</button>
+    </header>
+
+    <main>
+      <section class="content-section page-section">
+        <div class="section-header">
+          <p class="section-tag">إنجازات الملوك</p>
+          <h2>أبرز إنجازات Land Kings.</h2>
+        </div>
+
+        <div id="achievementAdmin" class="admin-panel hidden" aria-live="polite">
+          <h3>إضافة إنجاز جديد</h3>
+          <form id="achievementForm" class="admin-form">
+            <div class="field-grid">
+              <label>العنوان<input type="text" name="title" placeholder="مثل: إطلاق القناة الرسمية" required /></label>
+              <label>الصورة (رابط أو ملف)<input type="url" name="image" placeholder="https://example.com/image.jpg" /></label>
+            </div>
+            <label>الوصف<textarea name="description" rows="4" placeholder="اكتب تفاصيل الإنجاز..." required></textarea></label>
+            <div class="form-row">
+              <label class="file-picker">أو اختر صورة<input type="file" name="imageFile" accept="image/*" /></label>
+              <button type="submit" class="primary-action">حفظ الإنجاز</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="achievementsGrid" class="card-grid achievements-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div style="text-align:center;padding:20px 0;">جميع الحقوق محفوظة LAND KING || 2026</div></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

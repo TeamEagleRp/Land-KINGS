@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم - هوية الملوك</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <header class="dashboard-topbar">
+    <button class="menu-button" id="menuButton" aria-label="فتح القائمة">☰</button>
+    <div class="brand">هوية الملوك</div>
+    <div class="user-area" id="userArea">جاري التحميل...</div>
+  </header>
+
+  <aside class="side-menu" id="sideMenu">
+    <div class="side-title">الأقسام</div>
+    <a href="index.html">الرئيسية</a>
+    <a href="identity.html">هوية الملوك</a>
+    <a href="founders.html">مؤسسي الملوك</a>
+    <a href="achievements.html">إنجازات الملوك</a>
+    <a href="accounts.html">الحسابات</a>
+    <a href="website.html">واجهة الموقع</a>
+    <a href="designer.html">مصمم التطبيق</a>
+    <form action="/auth/logout" method="POST">
+      <button type="submit" class="logout-button">تسجيل الخروج</button>
+    </form>
+  </aside>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <main class="dashboard-content">
+    <section class="welcome-card">
+      <p class="eyebrow">لوحة التحكم</p>
+      <h1 id="welcomeTitle">مرحبًا بك</h1>
+      <p>تم تسجيل الدخول باستخدام Discord بنجاح.</p>
+    </section>
+
+    <section class="sections-grid">
+      <a class="section-card" href="identity.html">
+        <span>01</span>
+        <strong>هوية الملوك</strong>
+        <small>التعريف والهوية</small>
+      </a>
+      <a class="section-card" href="founders.html">
+        <span>02</span>
+        <strong>مؤسسي الملوك</strong>
+        <small>التعرف على المؤسسين</small>
+      </a>
+      <a class="section-card" href="achievements.html">
+        <span>03</span>
+        <strong>إنجازات الملوك</strong>
+        <small>أهم الإنجازات</small>
+      </a>
+      <a class="section-card" href="accounts.html">
+        <span>04</span>
+        <strong>الحسابات</strong>
+        <small>الحسابات والروابط</small>
+      </a>
+      <a class="section-card" href="website.html">
+        <span>05</span>
+        <strong>واجهة الموقع</strong>
+        <small>معلومات الموقع</small>
+      </a>
+      <a class="section-card" href="designer.html">
+        <span>06</span>
+        <strong>مصمم التطبيق</strong>
+        <small>معلومات المصمم</small>
+      </a>
+    </section>
+  </main>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const sideMenu = document.getElementById("sideMenu");
+    const menuOverlay = document.getElementById("menuOverlay");
+
+    function toggleMenu() {
+      sideMenu.classList.toggle("open");
+      menuOverlay.classList.toggle("show");
+    }
+
+    menuButton.addEventListener("click", toggleMenu);
+    menuOverlay.addEventListener("click", toggleMenu);
+
+    fetch("/api/me")
+      .then(response => {
+        if (!response.ok) {
+          window.location.href = "/";
+          throw new Error("Not authenticated");
+        }
+        return response.json();
+      })
+      .then(data => {
+        const user = data.user;
+        document.getElementById("welcomeTitle").textContent =
+          `مرحبًا ${user.global_name || user.username}`;
+        document.getElementById("userArea").textContent =
+          user.global_name || user.username;
+      })
+      .catch(() => {});
+  </script>
+</body>
+</html>

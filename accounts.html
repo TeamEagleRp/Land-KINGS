@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>حسابات الملوك — Land Kings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark"><img src="1.jpg" alt="Land Kings Logo"></div>
+        <div class="brand-text">Land Kings</div>
+      </div>
+      <button id="hamburgerBtn" class="hamburger" aria-label="قائمة">&#9776;</button>
+      <div class="sidebar" id="sidebar">
+        <button id="closeSidebar" class="close-sidebar" aria-label="إغلاق">×</button>
+        <nav class="sidebar-nav" aria-label="القائمة الجانبية">
+          <a href="index.html">الرئيسية</a>
+          <a href="founders.html">مؤسسي الملوك</a>
+          <a href="achievements.html">إنجازات الملوك</a>
+          <a href="accounts.html">الحسابات</a>
+          <a href="website.html">واجهة الموقع</a>
+          <a href="designer.html">مصمم التطبيق</a>
+        </nav>
+      </div>
+      <button id="discordLoginBtn" class="discord-button" type="button">تسجيل دخول عبر ديسكورد</button>
+    </header>
+
+    <main>
+      <section class="content-section page-section">
+        <div class="section-header">
+          <p class="section-tag">حسابات الملوك</p>
+          <h2>مرحبا بك في</h2>
+        </div>
+
+        <div class="section-copy" style="text-align:center;">
+          <h1 class="accounts-title">Land Kings</h1>
+          <p class="accounts-desc">الحسابا الرسمية لLand Kings  بالمجتمع وحساباته الرسمية.</p>
+
+          <div class="social-buttons">
+            <a href="https://discord.gg/l-kg" target="_blank" class="social-btn discord-btn" rel="noreferrer">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/discord.svg" alt="discord" class="social-icon"/>
+              <span>دخول إلى سيرفر الديسكورد</span>
+            </a>
+
+            <a href="https://www.tiktok.com/@landkings1" target="_blank" class="social-btn tiktok-btn" rel="noreferrer">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tiktok.svg" alt="tiktok" class="social-icon"/>
+              <span>حساب التيك توك</span>
+            </a>
+          </div>
+
+          <div class="social-meta-box">
+            <div class="social-meta">
+              <div class="meta-item"><strong>اختصار الديسكورد :</strong> <span class="meta-value">l-kg</span></div>
+              <div class="meta-item"><strong>يوزر حساب التيكتوك :</strong> <span class="meta-value">@landkings1</span></div>
+            </div>
+          </div>
+
+          <div id="accountsGrid" class="card-grid accounts-grid" aria-live="polite" style="margin-top:1.6rem;"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div style="text-align:center;padding:20px 0;">جميع الحقوق محفوظة LAND KING || 2026</div></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
