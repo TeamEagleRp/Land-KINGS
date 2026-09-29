@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>سجل العمليات — Land Kings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-page">
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="brand-mark"><img src="1.jpg" alt="Land Kings Logo"></div>
+      <div class="brand-text">Land Kings</div>
+    </div>
+    <button id="hamburgerBtn" class="hamburger" aria-label="فتح القائمة">☰</button>
+    <div class="sidebar" id="sidebar">
+      <button id="closeSidebar" class="close-sidebar" aria-label="إغلاق">×</button>
+      <nav class="sidebar-nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="founders.html">مؤسسي الملوك</a>
+        <a href="achievements.html">إنجازات الملوك</a>
+        <a href="accounts.html">الحسابات</a>
+        <a href="website.html">واجهة الموقع</a>
+        <a href="designer.html">مصمم التطبيق</a>
+        <a href="admin.html">الإدارة العليا</a>
+        <a class="active" href="logs.html">سجل العمليات</a>
+      </nav>
+    </div>
+  </header>
+  
+<div class="home-btn-wrapper">
+  <a href="index.html" class="home-btn">
+    <span>العودة للصفحة الرئيسية</span>
+  </a>
+</div>
+
+<main>
+    <section class="content-section page-section admin-dashboard">
+      <div class="section-header">
+        <p class="section-tag">Activity Log</p>
+        <h2>سجل عمليات المسؤولين</h2>
+        <p class="section-copy">كل عملية تظهر كبطاقة مستقلة، بثلاث بطاقات في كل صف.</p>
+      </div>
+      <div id="logsList" class="management-grid logs-grid">جاري تحميل السجل...</div>
+    </section>
+  </main>
+  <script>
+  (async()=>{
+    const root=document.getElementById('logsList');
+    const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+    try{
+      const u=await fetch('/api/user',{credentials:'same-origin',cache:'no-store'}).then(r=>r.json());
+      if(!u.authenticated || !u.user?.isSuperAdmin){ location.href='/'; return; }
+      const data=await fetch('/api/logs',{credentials:'same-origin',cache:'no-store'}).then(r=>r.json());
+      const logs=Array.isArray(data.logs)?data.logs:[];
+      if(!logs.length){ root.innerHTML='<div class="no-achievements">لا توجد عمليات مسجلة حاليًا.</div>'; return; }
+      root.innerHTML=logs.map(log=>`
+        <article class="management-card log-card">
+          <span class="log-action">${esc(log.action||'عملية')}</span>
+          <h3>${esc(log.details||'')}</h3>
+          <p>بواسطة ${esc(log.actor?.username||'مسؤول')}</p>
+          <time>${esc(new Date(log.at||Date.now()).toLocaleString('ar'))}</time>
+        </article>`).join('');
+    }catch(e){ root.textContent='تعذر تحميل سجل العمليات.'; }
+  })();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

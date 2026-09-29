@@ -32,10 +32,7 @@
           <div class="brand-text">Land Kings</div>
         </div>
 
-        
-        <button id="hamburgerBtn" class="hamburger" aria-label="قائمة">
-          &#9776;
-        </button>
+
 
         <div class="sidebar" id="sidebar">
           <button id="closeSidebar" class="close-sidebar" aria-label="إغلاق">×</button>
@@ -46,13 +43,15 @@
             <a href="accounts.html">الحسابات</a>
             <a href="website.html">واجهة الموقع</a>
             <a href="designer.html">مصمم التطبيق</a>
-
+            <a id="superAdminLink" class="hidden" href="admin.html">الإدارة العليا</a>
+            <a id="superLogsLink" class="hidden" href="logs.html">سجل العمليات</a>
           </nav>
         </div>
 
-        <button id="discordLoginBtn" class="discord-button" type="button">
-          تسجيل دخول عبر ديسكورد
-        </button>
+<button id="discordLoginBtn" class="discord-button" type="button">
+  تسجيل دخول عبر ديسكورد
+</button>
+
       </header>
 
       <main>
@@ -89,6 +88,8 @@
                     <tr><td>الحسابات</td><td><a href="accounts.html">فتح</a></td></tr>
                     <tr><td>واجهة الموقع</td><td><a href="website.html">فتح</a></td></tr>
                     <tr><td>مصمم التطبيق</td><td><a href="designer.html">فتح</a></td></tr>
+                   <tr><td>الإدارة العليا</td><td><a id="superAdminLink" class="hidden" href="admin.html">فتح</a></td></tr>
+                   <tr><td>logs</td><td><a id="superLogsLink" class="hidden" href="logs.html">فتح</a></td></tr>
                   </tbody>
                 </table>
               </div>
@@ -97,149 +98,7 @@
           </center>
         </section>
 
-        <!-- IDENTITY PAGE -->
-        <section id="identity" class="content-section page-section">
-          <div class="section-header">
-            <p class="section-tag">هوية الملوك</p>
-            <h2>هويّة الملوك</h2>
-          </div>
-          <div class="section-copy">
-            <p>— 𝗟𝗮𝗻𝗗 𝗞𝗶𝗻𝗚𝘀 , 𝘃𝗥𝗣 .</p>
-            <p><img src="https://cdn.discordapp.com/emojis/1537843771570393098.webp?size=44" alt="" class="inline-emoji"> — مــرحــبــًا بــكــم فــي لانــد كــيــنــق ، ســيــرفــر حــيــاة واقــعــيــة يــهــدف إلــى تــقــديــم تــجــربــة رول بــلاي مــتــكــامــلــة ومــخــتــلــفــة ، حــيــث تــبــدأ قــصــتــك وتــصــنــع شــخــصــيــتــك وتــحــدد مــســيــرتــك بــنــفــســك .</p>
-            <p><img src="https://cdn.discordapp.com/emojis/1533548255890116790.webp?size=44&animated=true" alt="" class="inline-emoji"> — نــعــتــمــد فــي لانــد كــيــنــق عــلــى الــرول الــعــالــي والــتــجــربــة الــواقــعــيــة ، مــع أنــظــمــة مــتــنــوعــة تــخــلــي كــل لاعــب يــقــدر يــعــيــش الــحــيــاة الــتــي يــخــتــارهــا ، ســواء كــان مــواطــن ، عــســكــري ، مــوظــف ، تــاجــر ، أو شــخــص يــبــنــي طــريــقــه بــعــيــد عــن الــقــانــون.</p>
-            <p><img src="https://cdn.discordapp.com/emojis/1537221597616807986.webp?size=44&animated=true" alt="" class="inline-emoji"> — نــســعــى دائــمــًا لــلــتــطــويــر والــتــجــديــد ، مــن خــلال الــســيــزونــات والــتــحــديــثــات والــفــعــالــيــات الــمــســتــمــرة ، ونــهــتــم بــأن تــكــون تــجــربــة الــلاعــب مــمــتــعــة ومــنــظــمــة وتــســتــحــق الــوقــت الــلــي يــقــضــيــه داخــل الــمــديــنــة .</p>
-            <p><img src="https://cdn.discordapp.com/emojis/1533844497295736913.webp?size=44&animated=true" alt="" class="inline-emoji"> — ومــن أهــم مــا نــفــخــر بــه هــو مــجــتــمــع لانــد كــيــنــق ، فــالــمــجــتــمــع هــو أســاس الــنــجــاح ، وبــتــفــاعــل الأعــضــاء ودعــمــهــم نــســتــمــر فــي صــنــع إنــجــازات جــديــدة وتــطــويــر الــســيــرفــر يــوم بــعــد يــوم .</p>
-          </div>
-
-          <div class="section-cta">
-            <a href="#" class="secondary-action" onclick="switchLandKingsPage('home'); return false;">عوده</a>
-          </div>
-        </section>
-
-         <!-- FOUNDERS PAGE -->
-        <section id="founders" class="content-section page-section">
-          <div class="section-header">
-            <p class="section-tag">مؤسسي الملوك</p>
-            <h2>من هنا بدأت Land King.</h2>
-          </div>
-          <p class="section-copy">
-            تعرّف على الأشخاص الذين ساهموا في تأسيس Land Kings وبناء هويته منذ البداية.
-          </p>
-
-          <div class="section-cta">
-            <a href="https://discord.gg/l-kg" class="primary-link" target="_blank" rel="noreferrer">
-              انضم للسيرفر
-            </a>
-          </div>
-
-          <div id="foundersGrid" class="card-grid founders-grid" aria-live="polite"></div>
-        </section>
-
-         <!-- ACHIEVEMENTS PAGE -->
-        <section id="achievements" class="content-section page-section">
-          <div class="section-header">
-            <p class="section-tag">إنجازات الملوك</p>
-            <h2>أبرز إنجازات Land Kings.</h2>
-          </div>
         
-
-          <div id="achievementAdmin" class="admin-panel hidden" aria-live="polite">
-            <h3>إضافة إنجاز جديد</h3>
-            <form id="achievementForm" class="admin-form">
-              <div class="field-grid">
-                <label>
-                  العنوان
-                  <input type="text" name="title" placeholder="مثل: إطلاق القناة الرسمية" required />
-                </label>
-                <label>
-                  الصورة (رابط أو ملف)
-                  <input type="url" name="image" placeholder="https://example.com/image.jpg" />
-                </label>
-              </div>
-              <label>
-                الوصف
-                <textarea name="description" rows="4" placeholder="اكتب تفاصيل الإنجاز..." required></textarea>
-              </label>
-              <div class="form-row">
-                <label class="file-picker">
-                  أو اختر صورة
-                  <input type="file" name="imageFile" accept="image/*" />
-                </label>
-                <button type="submit" class="primary-action">حفظ الإنجاز</button>
-              </div>
-            </form>
-          </div>
-
-          <div id="achievementsGrid" class="card-grid achievements-grid" aria-live="polite"></div>
-        </section>
-
-
-        <!-- WEBSITE PAGE -->
-        <section id="website" class="content-section website-section">
-          <div class="section-header">
-            <p class="section-tag">واجهة الموقع</p>
-            <h2>الموقع الرسمي لدى ارض الملوك.</h2>
-          </div>
- 
-          <div class="website-card">
-            <div class="website-copy">
-              <p>
-                منصة احترافية تجمع بين هوية المجتمع، الإنجازات، والمحتوى الرسمي في واجهة أنيقة
-                تدعم هوية Land Kings البصرية.
-              </p>
-              <a href="https://discord.gg/l-kg" class="primary-link" target="_blank" rel="noreferrer">
-                دخول السيرفر الأساسي
-              </a>
-            </div>
-            <div class="website-meta">
-              <div class="meta-box">
-                <span>رابط السيرفر الاساسي</span>
-                <a href="https://discord.gg/l-kg" target="_blank" rel="noreferrer">discord.gg/l-kg</a>
-              </div>
-              <div class="meta-box">
-                <span>رابط التيكتوك</span>
-                <a href="https://www.tiktok.com/@landkings1?_r=1&_t=ZS-99Ggk8MTkxQ" target="_blank" rel="noreferrer">
-                  @landkings1
-                </a>
-              </div>
-              
-        </section>
-
-        <!-- DESIGNER PAGE -->
-        <section id="designer" class="content-section designer-section">
-          <div class="section-header">
-            <p class="section-tag">مصمم التطبيق</p>
-            <h2>مطور و مصمم التطبيق بالكامل  </h2>
-          </div>
-
-          <div class="designer-card">
-            <div class="designer-image-wrap">
-              <img src="9.png" alt="مصمم التطبيق" class="designer-image" />
-            </div>
-
-            <div class="designer-info">
-              <h3>𝙼𝙶┊𝓜𝓱𝓶𝓪𝓭</h3>
-              <p>
-                مصمم التطبيق ومطور تجربة المستخدم، مسؤول عن الهوية البصرية وتجربة الاستخدام داخل الموقع.
-              </p>
-
-              <div class="designer-badge">
-                <img src="7.png" alt="MG Code" class="mini-badge" />
-                <span>برعاية سيرفر 𝗠𝗚 𝗖𝗼𝗱𝗲</span>
-              </div>
-
-              <div class="designer-actions">
-                <a href="https://discord.gg/QDgKwTthpm" class="primary-link" target="_blank" rel="noreferrer">
-                  التواصل عبر ديسكورد
-                </a>
-                <a href="mailto:mg7app@gmail.com" class="secondary-link" target="_blank" rel="noreferrer">
-                  التواصل عبر البريد الإلكتروني
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
 
       <footer class="site-footer">
         <div class="copyright-bar" style="text-align: center; padding: 20px 0;">
@@ -247,21 +106,6 @@
         </div>
       </footer>
     </div>
-
-    <div id="discordModal" class="modal hidden" aria-hidden="true">
-      <div class="modal-box">
-        <button id="closeDiscordModal" class="close-button" type="button" aria-label="إغلاق">×</button>
-        <h3>تسجيل الدخول عبر ديسكورد</h3>
-        <p>أدخل معرفك في ديسكورد لتفعيل صلاحيات المسؤولين.</p>
-        <input id="discordIdInput" type="text" placeholder="اكتب معرف ديسكورد" />
-        <div class="modal-actions">
-          <button id="confirmDiscordLogin" type="button" class="primary-action">تأكيد</button>
-          <button id="cancelDiscordLogin" type="button" class="secondary-action">إلغاء</button>
-        </div>
-        <p id="loginStatus" class="login-status" aria-live="polite"></p>
-      </div>
-    </div>
-
     <script src="script.js?v=20260830-0900"></script>
     <script>
       // Inline runtime patch: ensure owner grouping and edit button delegation works even if cached script differs
@@ -301,38 +145,8 @@
         document.addEventListener('click', function(e){
           const btn = e.target.closest('.owner-edit-button');
           if (!btn) return;
-                            // دالة التعامل مع تأكيد تسجيل الدخول
-function handleLoginConfirm(userId) {
-    const trimmedId = userId ? userId.trim() : '';
-
-    if (!trimmedId) {
-        alert('الرجاء إدخال المعرف بشكل صحيح');
-        return;
-    }
-
-    // جلب قائمة المسؤولين المحفوظة
-    const adminsList = loadFromStorage(STORAGE_KEYS.admins, []); // أو حسب اسم المبتكر لديك في STORAGE_KEYS
-
-    // التحقق هل المعرف ينتمي للمسؤولين؟
-    const isAdmin = adminsList.some(adminId => adminId === trimmedId || adminId.id === trimmedId);
-
-    if (isAdmin) {
-        // إذا كان مسؤولاً: تخزينه كأدمن وتفعيل الصلاحيات
-        localStorage.setItem('landkings-admin-id', trimmedId);
-        localStorage.setItem('user-role', 'admin');
-        console.log('تم الدخول بصلاحيات مسؤول');
-    } else {
-        // إذا كان شخصاً أدخل يوزره وهو ليس مسؤولاً: يدخل كشخص عادي
-        localStorage.removeItem('landkings-admin-id'); // التأكد من عدم وجود صلاحيات أدمن قديمة
-        localStorage.setItem('landkings-user-id', trimmedId);
-        localStorage.setItem('user-role', 'user');
-        console.log('تم الدخول كمستخدم عادي');
-    }
-
-    // إغلاق النافذة وتحديث واجهة المستخدم
-    closeLoginModal();
-    applyGrouping(); // أو دالة تحديث الصفحة/الواجهة لديك
-}
+          if (!localStorage.getItem('landkings-admin-id')){ alert('يجب تسجيل الدخول كمسؤول'); return; }
+          const oldName = btn.dataset.owner;
           const newName = prompt('عدل اسم المالك/اللقب:', oldName);
           if (!newName || !newName.trim()) return;
           const trimmed = newName.trim();

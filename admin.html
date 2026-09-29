@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>الإدارة العليا — Land Kings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-page">
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="brand-mark"><img src="1.jpg" alt="Land Kings Logo"></div>
+      <div class="brand-text">Land Kings</div>
+    </div>
+    <button id="hamburgerBtn" class="hamburger" aria-label="فتح القائمة">☰</button>
+    <div class="sidebar" id="sidebar">
+      <button id="closeSidebar" class="close-sidebar" aria-label="إغلاق">×</button>
+      <nav class="sidebar-nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="founders.html">مؤسسي الملوك</a>
+        <a href="achievements.html">إنجازات الملوك</a>
+        <a href="accounts.html">الحسابات</a>
+        <a href="website.html">واجهة الموقع</a>
+        <a href="designer.html">مصمم التطبيق</a>
+        <a class="active" href="admin.html">الإدارة العليا</a>
+        <a href="logs.html">سجل العمليات</a>
+      </nav>
+    </div>
+  </header>
+
+  
+<div class="home-btn-wrapper">
+  <a href="index.html" class="home-btn">
+    <span>العودة للصفحة الرئيسية</span>
+  </a>
+</div>
+
+<main>
+    <section class="content-section page-section admin-dashboard">
+      <div class="section-header">
+        <p class="section-tag">Super Admin</p>
+        <h2>الإدارة العليا</h2>
+        <p class="section-copy">إدارة المسؤولين والمؤسسين من مكان واحد.</p>
+      </div>
+
+      <div id="adminMessage" class="admin-message hidden"></div>
+
+      <div class="admin-panel">
+        <div class="panel-heading">
+          <div><span class="panel-icon">01</span><h3>إضافة مسؤول</h3></div>
+          <p>اختر نوع الصلاحية للشخص قبل إضافته.</p>
+        </div>
+        <form id="adminForm" class="admin-form">
+          <div class="field-grid">
+            <label>Discord ID للشخص
+              <input name="id" inputmode="numeric" placeholder="أدخل Discord ID" required>
+            </label>
+            <label>نوع المسؤول
+              <select name="role" required>
+                <option value="admin">مسؤول عادي</option>
+                <option value="superadmin">مسؤول أعلى</option>
+              </select>
+            </label>
+          </div>
+          <button class="primary-action" type="submit">إضافة المسؤول</button>
+        </form>
+      </div>
+
+      <div class="admin-panel">
+        <div class="panel-heading">
+          <div><span class="panel-icon">02</span><h3>المسؤولون</h3></div>
+          <p>ثلاثة بطاقات في الصف، ثم الصف التالي تلقائيًا.</p>
+        </div>
+        <div id="adminsList" class="management-grid"></div>
+      </div>
+
+      <div class="admin-panel">
+        <div class="panel-heading">
+          <div><span class="panel-icon">03</span><h3>إضافة مؤسس</h3></div>
+          <p>الصورة اختيارية، ويمكن إضافة المؤسس بدون صورة.</p>
+        </div>
+        <form id="founderForm" class="admin-form">
+          <div class="field-grid">
+            <label>اسم الشخص<input name="name" required></label>
+            <label>يوزر ديسكورد<input name="username" placeholder="username" required></label>
+          </div>
+          <div class="form-row">
+            <label class="file-picker">رفع صورة (اختياري)<input type="file" name="imageFile" accept="image/*"></label>
+            <button class="primary-action" type="submit">إضافة المؤسس</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="admin-panel">
+        <div class="panel-heading">
+          <div><span class="panel-icon">04</span><h3>المؤسسون</h3></div>
+          <p>المؤسس الجديد ينضاف إلى الموجودين ولا يحذفهم.</p>
+        </div>
+        <div id="foundersList" class="management-grid founders-grid"></div>
+      </div>
+    </section>
+  </main>
+  <script src="admin.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

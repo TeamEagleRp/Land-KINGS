@@ -22,12 +22,21 @@
           <a href="accounts.html">الحسابات</a>
           <a href="website.html">واجهة الموقع</a>
           <a href="designer.html">مصمم التطبيق</a>
+            <a id="superAdminLink" class="hidden" href="admin.html">الإدارة العليا</a>
+            <a id="superLogsLink" class="hidden" href="logs.html">logs</a>
         </nav>
       </div>
-      
-    </header>
 
+    </header>
     <main>
+
+<div class="home-btn-wrapper">
+  <a href="index.html" class="home-btn">
+    <i class="fa-solid fa-house"></i>
+    <span>العودة للصفحة الرئيسية</span>
+  </a>
+</div>
+
       <section class="content-section page-section">
         <div class="section-header">
           <p class="section-tag">إنجازات الملوك</p>
@@ -38,12 +47,13 @@
           <h3>إضافة إنجاز جديد</h3>
           <form id="achievementForm" class="admin-form">
             <div class="field-grid">
-              <label>العنوان<input type="text" name="title" placeholder="مثل: إطلاق القناة الرسمية" required /></label>
-              <label>الصورة (رابط أو ملف)<input type="url" name="image" placeholder="https://example.com/image.jpg" /></label>
+              <label>اسم الإنجاز<input type="text" name="title" placeholder="مثل: إطلاق القناة الرسمية" required /></label>
+              <label>التاريخ (اختياري)<input type="date" name="date" /></label>
+              
             </div>
             <label>الوصف<textarea name="description" rows="4" placeholder="اكتب تفاصيل الإنجاز..." required></textarea></label>
             <div class="form-row">
-              <label class="file-picker">أو اختر صورة<input type="file" name="imageFile" accept="image/*" /></label>
+              <label class="file-picker">رفع صورة (اختياري)<input type="file" name="imageFile" accept="image/*" /></label>
               <button type="submit" class="primary-action">حفظ الإنجاز</button>
             </div>
           </form>
@@ -55,6 +65,5 @@
 
     <footer class="site-footer"><div style="text-align:center;padding:20px 0;">جميع الحقوق محفوظة LAND KING || 2026</div></footer>
     <script src="script.js"></script>
-    
   </body>
 </html>

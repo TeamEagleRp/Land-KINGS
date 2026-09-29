@@ -1,0 +1,257 @@
+{
+  "achievements": [],
+  "founders": [],
+  "admins": [
+    "1525706817559203972",
+    "1277935535893119067",
+    "1086126761651216584",
+    "424596757478113300",
+    "426970269241049088",
+    "1443579668195315844",
+    "1521892362152968195"
+  ],
+  "logs": [
+    {
+      "id": "mujcol7uywca3u",
+      "action": "تسجيل دخول مسؤول",
+      "details": "تم تسجيل دخول مسؤول أعلى عبر Discord",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-27T05:00:40.170Z"
+    },
+    {
+      "id": "mujcm3z79zr34z",
+      "action": "تسجيل خروج مسؤول",
+      "details": "تم تسجيل خروج مسؤول أعلى",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-27T04:58:44.515Z"
+    },
+    {
+      "id": "mujblvarv6ba6o",
+      "action": "تسجيل دخول مسؤول",
+      "details": "تم تسجيل دخول مسؤول أعلى عبر Discord",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-27T04:30:33.651Z"
+    },
+    {
+      "id": "mujblg09zugfss",
+      "action": "تسجيل خروج مسؤول",
+      "details": "تم تسجيل خروج مسؤول أعلى",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-27T04:30:13.833Z"
+    },
+    {
+      "id": "mujbi361gbcv6r",
+      "action": "حذف إنجاز",
+      "details": "تم حذف الإنجاز: 111",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-27T04:27:37.225Z"
+    },
+    {
+      "id": "mujbi0lp1b76d9",
+      "action": "إضافة إنجاز",
+      "details": "تمت إضافة الإنجاز: 111",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-27T04:27:33.901Z"
+    },
+    {
+      "id": "mujbh2h3cpt620",
+      "action": "تسجيل دخول مسؤول",
+      "details": "تم تسجيل دخول مسؤول أعلى عبر Discord",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-27T04:26:49.671Z"
+    },
+    {
+      "id": "mujbg43tp29wr3",
+      "action": "تسجيل خروج مسؤول",
+      "details": "تم تسجيل خروج مسؤول أعلى",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-27T04:26:05.129Z"
+    },
+    {
+      "id": "muitjsjgnj2cph",
+      "action": "حذف مؤسس",
+      "details": "تم حذف: MG CoDe",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-26T20:05:03.676Z"
+    },
+    {
+      "id": "muit6r15b284ix",
+      "action": "إضافة مؤسس",
+      "details": "تمت إضافة: MG CoDe (𝐌𝐆 𝐒𝐞𝐜𝐮𝐫𝐢𝐭𝐲)",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-26T19:54:55.194Z"
+    },
+    {
+      "id": "muisw3snawr3yz",
+      "action": "حذف إنجاز",
+      "details": "تم حذف الإنجاز: تجربه",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-26T19:46:38.519Z"
+    },
+    {
+      "id": "muisvh675jpjpi",
+      "action": "إضافة إنجاز",
+      "details": "تمت إضافة الإنجاز: تجربه",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-26T19:46:09.199Z"
+    },
+    {
+      "id": "muismbhs7rwx0s",
+      "action": "حذف إنجاز",
+      "details": "تم حذف الإنجاز: vcxg",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-26T19:39:01.936Z"
+    },
+    {
+      "id": "muism3wuvjzmi9",
+      "action": "تسجيل دخول مسؤول",
+      "details": "تم تسجيل دخول مسؤول أعلى عبر Discord",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-26T19:38:52.110Z"
+    },
+    {
+      "id": "muisjyncj2b66s",
+      "action": "تسجيل خروج مسؤول",
+      "details": "تم تسجيل خروج مسؤول أعلى",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-26T19:37:11.976Z"
+    },
+    {
+      "id": "muisjs82lkpvw2",
+      "action": "إضافة إنجاز",
+      "details": "تمت إضافة الإنجاز: vcxg",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-26T19:37:03.651Z"
+    },
+    {
+      "id": "muisfnnlx8bmdg",
+      "action": "تسجيل دخول مسؤول",
+      "details": "تم تسجيل دخول مسؤول أعلى عبر Discord",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-26T19:33:51.105Z"
+    },
+    {
+      "id": "muiruly8rlm8lb",
+      "action": "حذف إنجاز",
+      "details": "تم حذف الإنجاز: sgfhtsgh",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-26T19:17:29.120Z"
+    },
+    {
+      "id": "muirui24gv9a5n",
+      "action": "حذف إنجاز",
+      "details": "تم حذف الإنجاز: fffff",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-26T19:17:24.076Z"
+    },
+    {
+      "id": "muirtw649o05p6",
+      "action": "إضافة إنجاز",
+      "details": "تمت إضافة الإنجاز: sgfhtsgh",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-26T19:16:55.708Z"
+    },
+    {
+      "id": "muirtipqqstgiu",
+      "action": "إضافة إنجاز",
+      "details": "تمت إضافة الإنجاز: fffff",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-26T19:16:38.270Z"
+    },
+    {
+      "id": "muirsnnfyieted",
+      "action": "تسجيل دخول مسؤول",
+      "details": "تم تسجيل دخول مسؤول أعلى عبر Discord",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/6a632f5beb709eacd4ec08bdc2146b18.png?size=256"
+      },
+      "at": "2026-09-26T19:15:58.011Z"
+    }
+  ]
+}

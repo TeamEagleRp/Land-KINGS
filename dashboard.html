@@ -1,103 +1,169 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>لوحة التحكم - هوية الملوك</title>
-  <link rel="stylesheet" href="dashboard.css">
-</head>
-<body>
-  <header class="dashboard-topbar">
-    <button class="menu-button" id="menuButton" aria-label="فتح القائمة">☰</button>
-    <div class="user-area" id="userArea">جاري التحميل...</div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Land Kings</title>
+    <meta
+      name="description"
+      content="Land Kings - المنصة الرسمية للتعريف بالمجتمع، مؤسسيه، أبرز إنجازاته، وحساباته الرسمية."
+    />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="styles.css?v=20260830-0900" />
+    <style>
+      /* إخفاء جميع الأقسام افتراضياً وإظهار القسم النشط فقط */
+      .hero-section,
+      .content-section {
+        display: none;
+      }
+      .hero-section.active-page,
+      .content-section.active-page {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark"><img src="1.jpg" alt="Land Kings Logo"></div>
+          <div class="brand-text">Land Kings</div>
+        </div>
+        <button id="hamburgerBtn" class="hamburger" aria-label="فتح القائمة">☰</button>
 
-  <aside class="side-menu" id="sideMenu">
-    <div class="side-title">الأقسام</div>
-    <a href="index.html">الرئيسية</a>
-    <a href="identity.html">هوية الملوك</a>
-    <a href="founders.html">مؤسسي الملوك</a>
-    <a href="achievements.html">إنجازات الملوك</a>
-    <a href="accounts.html">الحسابات</a>
-    <a href="website.html">واجهة الموقع</a>
-    <a href="designer.html">مصمم التطبيق</a>
-    <form action="/auth/logout" method="POST">
-      <button type="submit" class="logout-button">تسجيل الخروج</button>
-    </form>
-  </aside>
 
-  <div class="menu-overlay" id="menuOverlay"></div>
 
-  <main class="dashboard-content">
-    <section class="welcome-card">
-      <p class="eyebrow">لوحة التحكم</p>
-      <h1 id="welcomeTitle">مرحبًا بك</h1>
-      <p>تم تسجيل الدخول باستخدام Discord بنجاح.</p>
-    </section>
+        <div class="sidebar" id="sidebar">
+          <button id="closeSidebar" class="close-sidebar" aria-label="إغلاق">×</button>
+          <nav class="sidebar-nav" aria-label="القائمة الجانبية">
+            <a href="index.html">الرئيسية</a>
+            <a href="founders.html">مؤسسي الملوك</a>
+            <a href="achievements.html">إنجازات الملوك</a>
+            <a href="accounts.html">الحسابات</a>
+            <a href="website.html">واجهة الموقع</a>
+            <a href="designer.html">مصمم التطبيق</a>
+            <a id="superAdminLink" class="hidden" href="admin.html">الإدارة العليا</a>
+            <a id="superLogsLink" class="hidden" href="logs.html">سجل العمليات</a>
+          </nav>
+        </div>
 
-    <section class="sections-grid">
-      <a class="section-card" href="identity.html">
-        <span>01</span>
-        <strong>هوية الملوك</strong>
-        <small>التعريف والهوية</small>
-      </a>
-      <a class="section-card" href="founders.html">
-        <span>02</span>
-        <strong>مؤسسي الملوك</strong>
-        <small>التعرف على المؤسسين</small>
-      </a>
-      <a class="section-card" href="achievements.html">
-        <span>03</span>
-        <strong>إنجازات الملوك</strong>
-        <small>أهم الإنجازات</small>
-      </a>
-      <a class="section-card" href="accounts.html">
-        <span>04</span>
-        <strong>الحسابات</strong>
-        <small>الحسابات والروابط</small>
-      </a>
-      <a class="section-card" href="website.html">
-        <span>05</span>
-        <strong>واجهة الموقع</strong>
-        <small>معلومات الموقع</small>
-      </a>
-      <a class="section-card" href="designer.html">
-        <span>06</span>
-        <strong>مصمم التطبيق</strong>
-        <small>معلومات المصمم</small>
-      </a>
-    </section>
-  </main>
+<button id="discordLoginBtn" class="discord-button" type="button">
+  تسجيل دخول عبر ديسكورد
+</button>
 
-  <script>
-    const menuButton = document.getElementById("menuButton");
-    const sideMenu = document.getElementById("sideMenu");
-    const menuOverlay = document.getElementById("menuOverlay");
+      </header>
 
-    function toggleMenu() {
-      sideMenu.classList.toggle("open");
-      menuOverlay.classList.toggle("show");
-    }
+      <main>
+         <!-- HOME PAGE -->
+        <section id="home" class="hero-section active-page">
+          <center>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <p class="kicker">مرحبا بك في</p>
+              <h1 dir="ltr" class="logo"><span class="logo-word gold">Land</span> <span class="logo-word silver">KINGS</span></h1>
+              <p class="description">
+                <span class="desc-primary">لمنصة الرسمية للتعريف بالمجتمع، مؤسسيه، إنجازاته، وحساباته الرسمية.</span>
+              </p>
 
-    menuButton.addEventListener("click", toggleMenu);
-    menuOverlay.addEventListener("click", toggleMenu);
+              <p class="description">مملكةٌ تُبنى، واسمٌ يُخلّد. من هنا تبدأ حكاية لاند كينق؛ كيانٌ يجمع الطموح، القيادة، والإنجاز تحت اسمٍ واحد.</p>
 
-    fetch("/api/me")
-      .then(response => {
-        if (!response.ok) {
-          window.location.href = "/";
-          throw new Error("Not authenticated");
+              <p class="description">سيرفر vRP متوفر على منصتي PS4 وPS5، بتجربة متكاملة وأنظمة متنوعة.</p>
+
+              <p class="description">تعرّف على المؤسسين، واستكشف نخبة الملوك، وتابع أبرز الإنجازات والحسابات الرسمية.</p>
+
+              <div class="hero-actions">
+                    <a href="#" id="exploreBtn" class="primary-link">استكشف</a>
+                    <a href="identity.html" id="identityBtn" class="primary-link"> هوية الملوك</a>
+              </div>
+
+              <div id="sectionsTableWrap" class="sections-table-wrap hidden">
+                <table class="sections-table" id="sectionsTable" role="grid">
+                  <thead>
+                    <tr><th>القسم</th><th>عرض</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>مؤسسي الملوك</td><td><a href="founders.html">فتح</a></td></tr>
+                    <tr><td>إنجازات الملوك</td><td><a href="achievements.html">فتح</a></td></tr>
+                    <tr><td>الحسابات</td><td><a href="accounts.html">فتح</a></td></tr>
+                    <tr><td>واجهة الموقع</td><td><a href="website.html">فتح</a></td></tr>
+                    <tr><td>مصمم التطبيق</td><td><a href="designer.html">فتح</a></td></tr>
+                   <tr><td>الإدارة العليا</td><td><a id="superAdminLink" class="hidden" href="admin.html">فتح</a></td></tr>
+                   <tr><td>logs</td><td><a id="superLogsLink" class="hidden" href="logs.html">فتح</a></td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </center>
+        </section>
+
+        
+
+      <footer class="site-footer">
+        <div class="copyright-bar" style="text-align: center; padding: 20px 0;">
+          جميع الحقوق محفوظة LAND KING || 2026
+        </div>
+      </footer>
+    </div>
+    <script src="script.js?v=20260830-0900"></script>
+    <script>
+      // Inline runtime patch: ensure owner grouping and edit button delegation works even if cached script differs
+      (function(){
+        function getAdminId(){ return localStorage.getItem('landkings-admin-id')||null; }
+        function loadFromStorage(key, fallback){ try{ const s=localStorage.getItem(key); return s?JSON.parse(s):fallback;}catch(e){return fallback;} }
+        function saveToStorage(key,data){ localStorage.setItem(key, JSON.stringify(data)); }
+        const STORAGE_KEYS = { accounts: 'landkings-accounts', owners: 'landkings-owners' };
+
+        function buildGroupedHtml(){
+          const accounts = loadFromStorage(STORAGE_KEYS.accounts, []);
+          const ownersList = loadFromStorage(STORAGE_KEYS.owners, []);
+          const groups = {};
+          accounts.forEach((acct, idx)=>{ const owner=(acct.owner||'عام').trim()||'عام'; if(!groups[owner]) groups[owner]=[]; groups[owner].push({acct,idx}); });
+          ownersList.forEach(o=>{ if(!groups[o.name]) groups[o.name]=[]; });
+          const html = Object.keys(groups).map(owner=>{
+            const items = groups[owner].map(({acct,idx})=>{
+              const img = acct.image? `<img class=\"card-image\" src=\"${acct.image}\" alt=\"${acct.platform}\" loading=\"lazy\"/>` : `<div class=\"card-image\" style=\"display:grid;place-items:center;background:linear-gradient(135deg, rgba(247,210,31,.24), rgba(255,255,255,.08));color:#f7d21f;font-weight:800;font-size:2rem;\">LK</div>`;
+              return `\n  <article class=\"content-card account-card\">${img}<div class=\"card-body\">\n    <h3>${acct.platform}</h3>\n    <p>${acct.handle}</p>\n    <a href=\"${acct.link}\" target=\"_blank\" rel=\"noreferrer\">زيارة الحساب</a>\n  </div>\n  </article>`;
+            }).join('');
+            const ownerMeta = ownersList.find(o=>o.name===owner);
+            const canEdit = ownerMeta && ownerMeta.createdBy && ownerMeta.createdBy === getAdminId();
+            const editBtn = canEdit? `<button class=\"owner-edit-button\" data-owner=\"${owner}\">تعديل الاسم</button>` : '';
+            return `<section class=\"owner-section\"><div class=\"owner-header\"><h3 class=\"owner-name\">حسابات ${owner}</h3>${editBtn}</div><div class=\"card-grid owner-card-grid\">${items}</div></section>`;
+          }).join('');
+          return html;
         }
-        return response.json();
-      })
-      .then(data => {
-        const user = data.user;
-        document.getElementById("welcomeTitle").textContent =
-          `مرحبًا ${user.global_name || user.username}`;
-        document.getElementById("userArea").textContent =
-          user.global_name || user.username;
-      })
-      .catch(() => {});
-  </script>
-</body>
+
+        // initial grouping: replace flat list with grouped sections
+        function applyGrouping(){
+          const accountsGrid = document.getElementById('accountsGrid');
+          if (!accountsGrid) return;
+          accountsGrid.innerHTML = buildGroupedHtml();
+        }
+
+        // delegated handler for owner-edit-button
+        document.addEventListener('click', function(e){
+          const btn = e.target.closest('.owner-edit-button');
+          if (!btn) return;
+          if (!localStorage.getItem('landkings-admin-id')){ alert('يجب تسجيل الدخول كمسؤول'); return; }
+          const oldName = btn.dataset.owner;
+          const newName = prompt('عدل اسم المالك/اللقب:', oldName);
+          if (!newName || !newName.trim()) return;
+          const trimmed = newName.trim();
+          const owners = loadFromStorage(STORAGE_KEYS.owners, []);
+          if (owners.some(o=>o.name===trimmed && o.name!==oldName)){ alert('يوجد بالفعل قسم بنفس الاسم'); return; }
+          owners.forEach(o=>{ if(o.name===oldName) o.name=trimmed; }); saveToStorage(STORAGE_KEYS.owners, owners);
+          const accounts = loadFromStorage(STORAGE_KEYS.accounts, []);
+          accounts.forEach(a=>{ if((a.owner||'').trim()===oldName) a.owner = trimmed; }); saveToStorage(STORAGE_KEYS.accounts, accounts);
+          applyGrouping();
+        });
+
+        // run once on load
+        document.addEventListener('DOMContentLoaded', applyGrouping);
+        // also run after a small delay in case scripts replace the content later
+        setTimeout(applyGrouping, 400);
+      })();
+    </script>
+  </body>
 </html>
