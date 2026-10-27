@@ -10,6 +10,29 @@
      font-weight:800;
      border:1px solid #f7d31f00}
      
-     
-     
-     .primary-link:hover{transform:translateY(-2px);filter:brightness(1.05)}.sections-table-wrap{margin:30px auto 0;max-width:720px}.hidden{display:none!important}.sections-table{width:100%;border-collapse:collapse;background:rgba(12,12,12,.7);border:1px solid rgba(255,255,255,.1);border-radius:14px;overflow:hidden}.sections-table th,.sections-table td{padding:14px;border-bottom:1px solid rgba(255,255,255,.08)}.sections-table th{color:#f7d21f}.sections-table td a{color:#f7d21f;text-decoration:none;font-weight:700}@media(max-width:650px){.topbar{height:auto;min-height:78px;padding:12px 14px;gap:10px;flex-wrap:wrap}.brand-text{font-size:16px}.brand-mark{width:42px;height:42px}.discord-button{font-size:12px;padding:10px 12px}.hero-section{padding:45px 15px}.logo{font-size:55px;letter-spacing:-3px}.description{font-size:14px}.sidebar{width:280px}}
+     /* Sections table on homepage */
+.sections-table-wrap { text-align: center; margin-top: 2rem; }
+.sections-table { width: 100%; max-width: 400px; margin: 0 auto; border-collapse: collapse; background: rgba(26, 25, 25, 0.7); border-radius: 12px; overflow: hidden; }
+.sections-table thead th { background: rgba(247,210,31,0.08); color: var(--gold); padding: 0.9rem 1rem; text-align: center; }
+.sections-table tbody td { padding: 0.9rem 0.8rem; color: var(--muted); border-top: 1px solid rgba(255, 255, 255, 0.082); }
+.sections-table a { color: var(--gold); font-weight: 800; text-decoration: none; }
+.hero-actions .primary-link {
+    color: #ffffffaf !important; /* تجعل لون الكتابة أبيض */
+}
+
+     .primary-link:hover{transform:translateY(-2px);filter:brightness(1.05)}
+     .sections-table-wrap{margin:30px auto 0;max-width:720px}
+     .hidden{display:none!important}
+     .sections-table{width:100%;border-collapse:collapse;background:rgba(12,12,12,.7);border:1px solid rgba(255,255,255,.1);border-radius:14px;overflow:hidden}
+     .sections-table th,
+     .sections-table td{padding:14px;border-bottom:1px solid rgba(255,255,255,.08)}
+     .sections-table th{color:#f7d21f}
+     .sections-table td a{color:#f7d21f;text-decoration:none;font-weight:700}
+     @media(max-width:650px){.topbar{height:auto;min-height:78px;padding:12px 14px;gap:10px;flex-wrap:wrap}
+     .brand-text{font-size:16px}
+     .brand-mark{width:42px;height:42px}
+     .discord-button{font-size:12px;padding:10px 12px}
+     .hero-section{padding:45px 15px}
+     .logo{font-size:55px;letter-spacing:-3px}
+     .description{font-size:14px}
+     .sidebar{width:280px}}
