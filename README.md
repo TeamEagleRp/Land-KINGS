@@ -1,35 +1,56 @@
-# Land Kings — Discord Login + Shared Admin System
+# Land Kings Website
 
-## التشغيل
+موقع Land Kings مبني باستخدام Node.js وExpress مع تسجيل دخول Discord OAuth2.
+
+## المتطلبات
+- Node.js 18 أو أحدث
+- تطبيق Discord Developer Portal مع OAuth2 (Identify)
+- رابط callback مطابق تمامًا للقيمة المسجلة في Discord
+
+## التشغيل محليًا
+1. انسخ `.env.example` إلى ملف باسم `.env`.
+2. أدخل بيانات Discord OAuth2 داخل `.env`.
+3. نفّذ:
+   ```bash
+   npm install
+   npm start
+   ```
+4. افتح `http://localhost:3050`.
+
+## متغيرات البيئة
+- `PORT`: المنفذ (الافتراضي 3050).
+- `BASE_URL`: عنوان الموقع العام.
+- `DISCORD_CLIENT_ID` و`DISCORD_CLIENT_SECRET`.
+- `DISCORD_CALLBACK_URL`: يجب أن ينتهي بـ `/auth/discord/callback`.
+- `SESSION_SECRET`: قيمة طويلة وعشوائية.
+- `ADMINISTRATOR_IDS`: معرفات المسؤولين العاديين مفصولة بفواصل.
+- `SUPER_ADMIN_IDS`: معرفات الإدارة العليا مفصولة بفواصل.
+
+**مهم:** لا ترفع `.env` إلى GitHub ولا تشارك أسرار Discord. أضف المتغيرات من إعدادات الاستضافة (Render Environment).
+
+## نشر المشروع على GitHub
+من داخل مجلد المشروع:
 ```bash
-npm install
-npm start
+git init
+git add .
+git commit -m "Update Land Kings website"
+git branch -M main
+git remote add origin https://github.com/USERNAME/REPOSITORY.git
+git push -u origin main
 ```
-افتح `http://localhost:3050`.
+إذا كان remote موجودًا مسبقًا، لا تكرر أمر `git remote add`؛ استخدم:
+```bash
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+git push -u origin main
+```
 
-## Discord OAuth2
-ضع بيانات OAuth2 في `.env`، واجعل Redirect URI:
-`http://localhost:3050/auth/discord/callback`
-
-## المسؤولون
-- `ADMIN_IDS` أو `ADMINISTRATOR_IDS`: المسؤولون العاديون. يمكنهم إضافة/حذف الإنجازات.
-- `SUPER_ADMIN_IDS` أو `SUPER_ADMIN_ID`: المسؤولان الأعلى. لهما صلاحية إدارة المسؤولين والمؤسسين ومشاهدة سجل العمليات.
-
-## التخزين
-الإنجازات والمؤسسون والمسؤولون واللوج محفوظة في `data.json` على السيرفر، لذلك الإنجاز الذي يضيفه مسؤول يظهر لكل زائر من أي جهاز، وليس في LocalStorage الخاص بكل متصفح.
+## إعداد Render
+- Build Command: `npm install`
+- Start Command: `npm start`
+- أضف متغيرات `.env` إلى Environment في Render.
+- اضبط `BASE_URL` على رابط Render، و`DISCORD_CALLBACK_URL` على:
+  `https://YOUR-SERVICE.onrender.com/auth/discord/callback`
+- أضف رابط callback نفسه في Discord Developer Portal.
 
 ## الصور
-يمكن وضع رابط صورة أو رفع صورة مباشرة من النموذج. الرفع يحفظ الصورة كـ Data URL داخل قاعدة البيانات المحلية.
-
-
-## صلاحيات المسؤولين في النسخة المحدثة
-
-- عند تسجيل الدخول عبر Discord، يتم التعرف على Discord User ID من جلسة OAuth.
-- المسؤول العادي يستطيع إضافة وحذف الإنجازات من صفحة «إنجازات الملوك».
-- كل إضافة أو حذف إنجاز يسجل في سجل العمليات.
-- تسجيل دخول وخروج المسؤولين يسجل أيضًا.
-- المسؤول الأعلى فقط يستطيع فتح `admin.html` أو `/admin`.
-- المسؤول الأعلى يستطيع مشاهدة سجل العمليات وإدارة المسؤولين والمؤسسين.
-- المسؤول الأعلى يظل محسوبًا أيضًا كمسؤول عادي بالنسبة لصلاحيات الإنجازات.
-- صفحة الإدارة العليا لا تظهر في القائمة إلا للحسابات الموجودة في `SUPER_ADMIN_ID` / `SUPER_ADMIN_IDS`.
-- الوصول محمي من السيرفر، وليس مجرد إخفاء زر في الواجهة.
+كل الصور المحلية موجودة داخل مجلد `assets/`.

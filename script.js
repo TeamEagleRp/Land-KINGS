@@ -7,32 +7,32 @@ const defaultFounders = [
   {
     name: '# BiN ShaBiB .',
     description: 'يوزر ديسكورد: only305',
-    image: '1.png'
+    image: 'assets/1.png'
   },
   {
     name: 'only305',
     description: 'يوزر ديسكورد: .1wc',
-    image: '2.png'
+    image: 'assets/2.png'
   },
   {
     name: 'NyrShmRr .',
     description: 'يوزر ديسكورد: x679',
-    image: '3.png'
+    image: 'assets/3.png'
   },
   {
     name: '# Tariq 🇩🇰 .',
     description: 'يوزر ديسكورد: c7xc.',
-    image: '4.png'
+    image: 'assets/4.png'
   },
   {
     name: '# - الـشـايـب الـمـسـتـقـعـد ˢ⁷',
     description: 'يوزر ديسكورد: b.j8',
-    image: '5.png'
+    image: 'assets/5.png'
   },
   {
     name: 'S5R !',
     description: 'يوزر ديسكورد: cefl.',
-    image: '6.png'
+    image: 'assets/6.png'
   }
 ];
 
@@ -182,7 +182,7 @@ async function renderFounders() {
     console.error('Founders loading error:', error);
     elements.foundersGrid.innerHTML = defaultFounders.map(person => {
       const username = (person.username || (person.description || '').match(/[:：]\s*(.+)$/)?.[1] || '');
-      const image = person.image || '1.png';
+      const image = person.image || 'assets/1.png';
       return `
         <article class="content-card founder-card">
           <img class="card-image" src="${escapeHtml(image)}" alt="${escapeHtml(person.name || 'Founder')}" loading="lazy">
@@ -811,7 +811,7 @@ function setupAchievementDelete() {
 
 function updateSuperAdminLink() {
   const isSuper = Boolean(state.currentUser?.isSuperAdmin);
-  document.querySelectorAll('#superAdminLink, #superLogsLink').forEach(link => {
+  document.querySelectorAll('#superAdminLink, #superLogsLink, #superAdminSidebarLink, #superLogsSidebarLink').forEach(link => {
     link.classList.toggle('hidden', !isSuper);
   });
 }
@@ -1041,14 +1041,12 @@ function toggleSidebar(open) {
   }
 
 
-  sidebar.classList.toggle(
-    'open',
-    open === undefined
-      ? !sidebar.classList.contains(
-          'open'
-        )
-      : Boolean(open)
-  );
+  const shouldOpen = open === undefined
+    ? !sidebar.classList.contains('open')
+    : Boolean(open);
+  sidebar.classList.toggle('open', shouldOpen);
+  const trigger = document.getElementById('hamburgerBtn');
+  if (trigger) trigger.setAttribute('aria-expanded', String(shouldOpen));
 }
 
 
@@ -1056,48 +1054,41 @@ function toggleSidebar(open) {
    Explore
    ========================================================= */
 
-function showSectionsTable(
-  show
-) {
+function renderExploreSections() {
+  const body = document.querySelector('#sectionsTable tbody');
+  if (!body) return;
 
-  const wrapper =
-    document.getElementById(
-      'sectionsTableWrap'
-    );
+  const sections = [
+    ['مصمم التطبيق', 'designer.html'],
+    ['واجهة الموقع', 'website.html'],
+    ['حسابات', 'accounts.html'],
+    ['إنجازات الملوك', 'achievements.html'],
+    ['مؤسسي الملوك', 'founders.html']
+  ];
 
-
-  if (!wrapper) {
-    return;
+  if (state.currentUser?.isSuperAdmin) {
+    sections.push(['الإدارة العليا', 'admin.html']);
+    sections.push(['سجل العمليات', 'logs.html']);
   }
 
-
-  const isHidden =
-    wrapper.classList.contains(
-      'hidden'
-    );
-
-
-  const shouldShow =
-    show === undefined
-      ? isHidden
-      : Boolean(show);
-
-
-  wrapper.classList.toggle(
-    'hidden',
-    !shouldShow
-  );
-
-
-  if (!shouldShow) {
-
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
+  body.innerHTML = sections.map(([label, href]) =>
+    `<tr><td>${label}</td><td><a href="${href}">فتح</a></td></tr>`
+  ).join('');
 }
 
+function showSectionsTable(show) {
+  const wrapper = document.getElementById('sectionsTableWrap');
+  if (!wrapper) return;
+
+  renderExploreSections();
+  const isHidden = wrapper.classList.contains('hidden');
+  const shouldShow = show === undefined ? isHidden : Boolean(show);
+  wrapper.classList.toggle('hidden', !shouldShow);
+
+  if (shouldShow) {
+    wrapper.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
 
 /* =========================================================
    التهيئة

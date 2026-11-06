@@ -9,7 +9,7 @@ const fs = require('fs');
 
 const app = express();
 
-const PORT = Number(process.env.PORT) || 3050;
+const PORT = Number(process.env.PORT) || 3090;
 const BASE_URL = process.env.BASE_URL || `http://localhost:${PORT}`;
 const CALLBACK_URL =
   process.env.DISCORD_CALLBACK_URL ||
@@ -103,12 +103,12 @@ db.logs ||= [];
 // الحفاظ على المؤسسين الموجودين وعدم استبدالهم.
 if (db.founders.length === 0) {
   db.founders = [
-    { id: 'default-1', name: '# BiN ShaBiB .', username: 'only305', image: '1.png' },
-    { id: 'default-2', name: 'only305', username: '.1wc', image: '2.png' },
-    { id: 'default-3', name: 'NyrShmRr .', username: 'x679', image: '3.png' },
-    { id: 'default-4', name: '# Tariq 🇩🇰 .', username: 'c7xc.', image: '4.png' },
-    { id: 'default-5', name: '# - الـشـايـب الـمـسـتـقـعـد ˢ⁷', username: 'b.j8', image: '5.png' },
-    { id: 'default-6', name: 'S5R !', username: 'cefl.', image: '6.png' }
+    { id: 'default-1', name: '# BiN ShaBiB .', username: 'only305', image: 'assets/1.png' },
+    { id: 'default-2', name: 'only305', username: '.1wc', image: 'assets/2.png' },
+    { id: 'default-3', name: 'NyrShmRr .', username: 'x679', image: 'assets/3.png' },
+    { id: 'default-4', name: '# Tariq 🇩🇰 .', username: 'c7xc.', image: 'assets/4.png' },
+    { id: 'default-5', name: '# - الـشـايـب الـمـسـتـقـعـد ˢ⁷', username: 'b.j8', image: 'assets/5.png' },
+    { id: 'default-6', name: 'S5R !', username: 'cefl.', image: 'assets/6.png' }
   ];
 }
 

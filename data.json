@@ -5,37 +5,37 @@
       "id": "default-1",
       "name": "# BiN ShaBiB .",
       "username": "only305",
-      "image": "1.png"
+      "image": "assets/1.png"
     },
     {
       "id": "default-2",
       "name": "only305",
       "username": ".1wc",
-      "image": "2.png"
+      "image": "assets/2.png"
     },
     {
       "id": "default-3",
       "name": "NyrShmRr .",
       "username": "x679",
-      "image": "3.png"
+      "image": "assets/3.png"
     },
     {
       "id": "default-4",
       "name": "# Tariq 🇩🇰 .",
       "username": "c7xc.",
-      "image": "4.png"
+      "image": "assets/4.png"
     },
     {
       "id": "default-5",
       "name": "# - الـشـايـب الـمـسـتـقـعـد ˢ⁷",
       "username": "b.j8",
-      "image": "5.png"
+      "image": "assets/5.png"
     },
     {
       "id": "default-6",
       "name": "S5R !",
       "username": "cefl.",
-      "image": "6.png"
+      "image": "assets/6.png"
     }
   ],
   "admins": [
@@ -48,6 +48,83 @@
     "1521892362152968195"
   ],
   "logs": [
+    {
+      "id": "mw55qcfvouxd59",
+      "action": "تسجيل دخول مسؤول",
+      "details": "تم تسجيل دخول مسؤول أعلى عبر Discord",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "! 𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/0b577bcbfb557696d8fad774bd56940e.png?size=256"
+      },
+      "at": "2026-11-06T15:56:43.003Z"
+    },
+    {
+      "id": "mw55q5dnlh2241",
+      "action": "تسجيل خروج مسؤول",
+      "details": "تم تسجيل خروج مسؤول أعلى",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "! 𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/0b577bcbfb557696d8fad774bd56940e.png?size=256"
+      },
+      "at": "2026-11-06T15:56:33.851Z"
+    },
+    {
+      "id": "mw55oroyxor6gf",
+      "action": "تسجيل دخول مسؤول",
+      "details": "تم تسجيل دخول مسؤول أعلى عبر Discord",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "! 𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/0b577bcbfb557696d8fad774bd56940e.png?size=256"
+      },
+      "at": "2026-11-06T15:55:29.458Z"
+    },
+    {
+      "id": "mw55olc6ni4ov3",
+      "action": "تسجيل خروج مسؤول",
+      "details": "تم تسجيل خروج مسؤول أعلى",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "! 𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/0b577bcbfb557696d8fad774bd56940e.png?size=256"
+      },
+      "at": "2026-11-06T15:55:21.222Z"
+    },
+    {
+      "id": "mw55hpzoeigpg1",
+      "action": "تسجيل دخول مسؤول",
+      "details": "تم تسجيل دخول مسؤول أعلى عبر Discord",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "! 𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/0b577bcbfb557696d8fad774bd56940e.png?size=256"
+      },
+      "at": "2026-11-06T15:50:00.660Z"
+    },
+    {
+      "id": "mw53wle5aodrcz",
+      "action": "تسجيل دخول مسؤول",
+      "details": "تم تسجيل دخول مسؤول أعلى عبر Discord",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "! 𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/0b577bcbfb557696d8fad774bd56940e.png?size=256"
+      },
+      "at": "2026-11-06T15:05:35.309Z"
+    },
+    {
+      "id": "mw53w9a0t3nwey",
+      "action": "تسجيل دخول مسؤول",
+      "details": "تم تسجيل دخول مسؤول أعلى عبر Discord",
+      "actor": {
+        "id": "1443579668195315844",
+        "username": "! 𝑴𝑮〢𝓜𝓱𝓶𝓪𝓭 89",
+        "avatar": "https://cdn.discordapp.com/avatars/1443579668195315844/0b577bcbfb557696d8fad774bd56940e.png?size=256"
+      },
+      "at": "2026-11-06T15:05:19.609Z"
+    },
     {
       "id": "mvqbkdtccooksp",
       "action": "تسجيل خروج مسؤول",

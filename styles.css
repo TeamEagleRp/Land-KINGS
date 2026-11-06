@@ -23,7 +23,7 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, sans-serif;
   background:
-    url("8.png") center/cover no-repeat fixed;
+    url("assets/8.png") center/cover no-repeat fixed;
   color: var(--text);
 }
 
@@ -1257,7 +1257,7 @@ select {
 }
 html{scroll-behavior:smooth}
 body{
-  background:#050505 url("8.png") center/cover fixed no-repeat !important;
+  background:#050505 url("assets/8.png") center/cover fixed no-repeat !important;
   color:var(--lk-white);
 }
 body::before{
@@ -1508,3 +1508,78 @@ body::before{
   font-size: 2rem;
 }
 @media (max-width:600px){ .founder-no-image{width:120px;height:120px;} }
+
+
+/* ===== Responsive navigation, home action, footer and social colors ===== */
+.sidebar {
+  top: 0;
+  right: 0;
+  width: min(320px, 86vw);
+  max-width: 100%;
+  height: 100dvh;
+  min-height: 100vh;
+  padding: 1.25rem;
+  overflow-y: auto;
+  background: rgba(12, 15, 22, .97);
+  border-left: 1px solid rgba(247, 210, 31, .22);
+  box-shadow: -18px 0 45px rgba(0,0,0,.42);
+  transform: none !important;
+  right: 0;
+  translate: 110% 0;
+  transition: translate .25s ease;
+}
+.sidebar.open { translate: 0 0; right: 0; }
+.sidebar-nav { padding-bottom: 2rem; }
+.sidebar-nav a { display:block; background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.055); }
+.sidebar-nav a:hover { background: rgba(247,210,31,.13); }
+.close-sidebar { cursor:pointer; color:#fff; font-size:2rem; padding:.15rem .55rem; }
+.hamburger { cursor:pointer; z-index:2001; }
+.home-btn-wrapper {
+  box-sizing:border-box;
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  padding: 12px clamp(14px, 3vw, 28px);
+  display:flex;
+  justify-content:flex-start;
+}
+.home-btn {
+  position:static;
+  inset:auto;
+  margin:0;
+  min-height:42px;
+  gap:.55rem;
+  justify-content:center;
+  box-sizing:border-box;
+}
+.site-footer {
+  margin-top:3rem;
+  padding:2rem clamp(14px, 4vw, 32px) 1rem;
+  background:linear-gradient(180deg, rgba(20,22,29,.15), rgba(8,10,15,.96));
+  border-top:1px solid rgba(247,210,31,.2);
+}
+.footer-inner { max-width:1100px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:.85rem; text-align:center; }
+.footer-brand { display:flex; align-items:center; gap:.75rem; }
+.footer-brand img { width:48px; height:48px; border-radius:14px; object-fit:cover; }
+.footer-brand div { display:flex; flex-direction:column; text-align:right; gap:.15rem; }
+.footer-brand strong { color:var(--gold); letter-spacing:.08em; }
+.footer-brand span,.footer-note { color:var(--muted); font-size:.92rem; margin:0; }
+.footer-discord { display:inline-flex; align-items:center; gap:.55rem; padding:.7rem 1.1rem; border-radius:999px; color:#fff !important; background:#5865F2; text-decoration:none; font-weight:800; box-shadow:0 8px 22px rgba(88,101,242,.24); }
+.footer-discord:hover { background:#4752c4; transform:translateY(-1px); }
+.footer-discord-icon { font-size:1.2rem; }
+.copyright-bar { width:100%; padding-top:1rem !important; margin-top:.3rem; border-top:1px solid rgba(255,255,255,.08); color:#aeb4c2; font-size:.84rem; }
+.discord-btn { background:linear-gradient(135deg,#5865F2,#4752c4) !important; border-color:#7289ff !important; color:#fff !important; }
+.discord-btn .social-icon { filter:brightness(0) invert(1); }
+.tiktok-btn { background:linear-gradient(120deg,#101010 0%,#101010 52%,#25F4EE 53%,#FE2C55 100%) !important; border-color:#25F4EE !important; color:#fff !important; }
+.tiktok-btn .social-icon { filter:brightness(0) invert(1); }
+.social-buttons { flex-wrap:wrap; overflow:visible; }
+.social-meta-box .social-meta { flex-wrap:wrap; justify-content:center; }
+@media (max-width:600px) {
+  .topbar { gap:.5rem; }
+  .brand-text { font-size:clamp(.9rem,4vw,1.2rem); }
+  .home-btn { width:auto; max-width:100%; font-size:.82rem; padding:.65rem .9rem; }
+  .footer-brand { justify-content:center; }
+  .social-buttons .social-btn { flex:1 1 190px; max-width:100%; }
+  .social-meta-box .social-meta { gap:.65rem; flex-direction:column; width:100%; box-sizing:border-box; }
+  .sections-table { width:100%; }
+}
